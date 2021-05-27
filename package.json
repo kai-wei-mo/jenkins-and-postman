@@ -1,0 +1,28 @@
+{
+  "name": "postman-and-jenkins",
+  "version": "1.0.0",
+  "description": "",
+  "main": "configureCredsToken.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "download": "node downloadCollection.js $npm_config_name $npm_config_apikey",
+    "configUserPass": "node configureCredsUserPass.js $npm_config_username $npm_config_password",
+    "configToken": "node configureCredsToken.js $npm_config_token",
+    "setToProduction": "node productionOrStaging.js",
+    "runCollection": "newman run collection.json --suppress-exit-code 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kai-wei-mo/postman-and-jenkins.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kai-wei-mo/postman-and-jenkins/issues"
+  },
+  "homepage": "https://github.com/kai-wei-mo/postman-and-jenkins#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}

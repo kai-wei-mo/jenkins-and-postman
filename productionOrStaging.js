@@ -3,7 +3,6 @@
 
 let fs = require('fs');
 
-console.log(process.argv);
 let isProduction = JSON.parse(process.argv[2].toLowerCase());
 let collectionDir = 'collection.json';
 let fileJSON = '';

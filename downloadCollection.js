@@ -16,7 +16,7 @@ let getUIDByName = async (name) => {
 			apikey: apikey,
 		},
 	});
-
+	
 	/* 
    		if there are multiple collections with the same name, 
    		the one with the oldest "createdAt" is returned.

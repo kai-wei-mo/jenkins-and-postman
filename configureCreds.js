@@ -1,6 +1,4 @@
 // update credentials in the local collection.json
-// pass blank args where necessary 
-// (e.g. node configureCreds "" "" "myUsername" "myPassword" )
 
 let fs = require('fs');
 
@@ -26,7 +24,7 @@ fs.readFile(collectionDir, 'utf8', (err, data) => {
 	}
 
 	fileJSON = JSON.parse(data);
-	if (client_id && client_secret) {
+	if (client_id && client_secret && fileJSON.collection.variable) {
 		fileJSON.collection.variable.forEach((element) => {
 			if (element.key == 'client_id') {
 				element.value = client_id;
@@ -37,7 +35,7 @@ fs.readFile(collectionDir, 'utf8', (err, data) => {
 		});
 	}
 
-	if (username && password) {
+	if (username && password && fileJSON.collection.auth.basic) {
 		fileJSON.collection.auth.basic.forEach((element) => {
 			if (element.key == 'username') {
 				element.value = username;

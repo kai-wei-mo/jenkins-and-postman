@@ -1,5 +1,5 @@
 // modify isProduction in the local collection.json
-// it is not safe to assume the default will be staging mode
+// it is not safe to assume a default value of isProduction
 
 let fs = require('fs');
 

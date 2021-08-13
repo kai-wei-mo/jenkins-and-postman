@@ -12,6 +12,9 @@ fs.readFile(collectionDir, 'utf8', (err, data) => {
     }
 
     fileJSON = JSON.parse(data);
+
+    console.log(fileJSON);
+    
     if (fileJSON.collection.variable) {
         fileJSON.collection.variable.forEach((element) => {
             for (const property in argv) {

@@ -4,7 +4,9 @@
   "description": "",
   "main": "main.js",
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "minimist": "^1.2.5",
+    "newman": "^5.2.4"
   },
   "devDependencies": {},
   "scripts": {

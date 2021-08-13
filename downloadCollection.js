@@ -1,11 +1,13 @@
 // download collection.json using Postman API
 
-let fs = require('fs');
-let axios = require('axios');
+const fs = require('fs');
+const axios = require('axios');
+const argv = require('minimist')(process.argv.slice(2));
 
-let collectionName = process.argv[2];
-let apikey = process.argv[3];
-let collectionDir = 'collection.json';
+const collectionDir = 'collection.json';
+
+let collectionName = argv['collectionName'];
+let apikey = argv['apikey'];
 
 let getUIDByName = async (name) => {
 	let ret = '';

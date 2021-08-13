@@ -1,1 +1,0 @@
-// token generation is performed inside collection requests
